@@ -133,6 +133,9 @@
     margin: 0;
     color: var(--color-gray-light);
     font-size: 0.95rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 
