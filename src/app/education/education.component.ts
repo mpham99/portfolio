@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 export interface Education {
   institution: string;
@@ -14,7 +14,7 @@ export interface Education {
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss']
 })
-export class EducationComponent implements OnInit {
+export class EducationComponent {
   education: Education[] = [
     {
       institution: 'McMaster University',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 export interface Experience {
   company: string;
@@ -16,7 +16,7 @@ export interface Experience {
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceComponent {
   experiences: Experience[] = [
     {
       company: 'Canadian Blood Services',

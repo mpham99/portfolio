@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 export interface SkillCategory {
   name: string;
@@ -12,7 +12,7 @@ export interface SkillCategory {
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent {
   skillCategories: SkillCategory[] = [
     {
       name: 'Languages',
