@@ -5,8 +5,8 @@
 @import './styles/typography';
 @import './styles/animations';
 
-/* Bootstrap with minimal customization */
-@import '~bootstrap/scss/bootstrap';
+/* Bootstrap - using node_modules path */
+@import '../node_modules/bootstrap/scss/bootstrap';
 
 /* Smooth scrolling behavior */
 html {
