@@ -1,0 +1,212 @@
+.skills-section {
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-deep) 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-accent-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+  border-radius: 2px;
+  margin: 0 auto 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  margin: 0;
+  display: inline-block;
+
+  .keyword {
+    color: var(--color-secondary);
+  }
+
+  .string {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-gray-light);
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.skill-category {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+
+  &:hover {
+    transform: translateY(-8px) perspective(1000px) rotateX(3deg);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-color, var(--color-primary));
+  }
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-left: 4px solid var(--color-primary);
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.05) 0%,
+    transparent 100%
+  );
+  border-bottom: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.category-icon {
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+}
+
+.category-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.skill-category:hover .category-header {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.1) 0%,
+    transparent 100%
+  );
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.skill-item {
+  background: rgba(239, 68, 68, 0.08);
+  color: var(--skill-color, var(--color-accent));
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: default;
+
+  &:hover {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: var(--skill-color, var(--color-accent));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+  }
+
+  .skill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    display: inline-block;
+  }
+}
+
+.skills-highlight {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(251, 191, 36, 0.05) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  h3 {
+    font-size: 1.25rem;
+    margin: 0 0 1.5rem 0;
+    color: var(--color-text-primary);
+  }
+
+  p {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+.highlight-badge {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+// AOS Custom animations
+[data-aos="fade-scale"] {
+  opacity: 0;
+  transform: scale(0.85);
+
+  &.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

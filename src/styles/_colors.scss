@@ -1,0 +1,63 @@
+// Color System - Fiery Stage Aesthetic Palette
+
+// Primary Colors
+$color-red: #EF4444;
+$color-red-dark: #E71C3C;
+$color-orange: #F97316;
+$color-orange-warm: #FF8C42;
+$color-gold: #FBBF24;
+$color-gold-light: #FDB913;
+
+// Dark Base
+$color-dark: #1F2937;
+$color-dark-deep: #111827;
+$color-charcoal: #374151;
+
+// Light Accents
+$color-white: #FFFFFF;
+$color-light: #F3F4F6;
+$color-light-secondary: #E5E7EB;
+
+// Gray Neutrals
+$color-gray-dark: #4B5563;
+$color-gray-medium: #6B7280;
+$color-gray-light: #D1D5DB;
+
+// CSS Custom Properties for components
+:root {
+  // Primary colors
+  --color-primary: #{$color-red};
+  --color-primary-dark: #{$color-red-dark};
+  --color-secondary: #{$color-orange};
+  --color-secondary-warm: #{$color-orange-warm};
+  --color-accent: #{$color-gold};
+  --color-accent-light: #{$color-gold-light};
+
+  // Backgrounds
+  --color-bg-dark: #{$color-dark};
+  --color-bg-deep: #{$color-dark-deep};
+  --color-bg-card: #{$color-charcoal};
+
+  // Text
+  --color-text-primary: #{$color-white};
+  --color-text-secondary: #{$color-light};
+  --color-text-muted: #{$color-gray-light};
+
+  // Borders & Accents
+  --color-border: #{$color-charcoal};
+  --color-border-light: #{$color-gray-dark};
+
+  // Utility
+  --color-success: #10B981;
+  --color-warning: #{$color-orange};
+  --color-danger: #{$color-red};
+  --color-info: #06B6D4;
+
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  --shadow-red: 0 10px 30px rgba(239, 68, 68, 0.2);
+  --shadow-gold: 0 10px 30px rgba(251, 191, 36, 0.15);
+}

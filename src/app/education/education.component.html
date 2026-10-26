@@ -1,0 +1,40 @@
+<section id="education" class="education-section section-spacing">
+  <div class="container-lg">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-accent-line"></div>
+      <h2 class="section-title">
+        <span class="keyword">function</span> <span class="string">education</span>()
+      </h2>
+      <p class="section-subtitle">Continuous learning and professional development</p>
+    </div>
+
+    <div class="education-grid">
+      <div
+        *ngFor="let edu of education; let i = index"
+        class="education-card"
+        [attr.data-aos]="'fade-up'"
+        [attr.data-aos-delay]="i * 200"
+      >
+        <div class="education-header">
+          <div class="degree-badge">{{ edu.degree }}</div>
+          <h3 class="institution-name">{{ edu.institution }}</h3>
+        </div>
+
+        <div class="education-body">
+          <p class="program-name">{{ edu.program }}</p>
+          <p class="location">📍 {{ edu.location }}</p>
+
+          <div class="highlights" *ngIf="edu.highlights">
+            <ul>
+              <li *ngFor="let highlight of edu.highlights">{{ highlight }}</li>
+            </ul>
+          </div>
+
+          <a *ngIf="edu.url" [href]="edu.url" target="_blank" rel="noopener" class="learn-more">
+            Learn More →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
