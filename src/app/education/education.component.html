@@ -1,6 +1,6 @@
 <section id="education" class="education-section section-spacing">
   <div class="container-lg">
-    <div class="section-header" data-aos="fade-up">
+    <div class="section-header">
       <div class="section-accent-line"></div>
       <h2 class="section-title">
         <span class="keyword">function</span> <span class="string">education</span>()
@@ -12,8 +12,6 @@
       <div
         *ngFor="let edu of education; let i = index"
         class="education-card"
-        [attr.data-aos]="'fade-up'"
-        [attr.data-aos-delay]="i * 200"
       >
         <div class="education-header">
           <div class="degree-badge">{{ edu.degree }}</div>

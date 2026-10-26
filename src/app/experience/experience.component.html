@@ -1,6 +1,6 @@
 <section id="experience" class="experience-section section-spacing">
   <div class="container-lg">
-    <div class="section-header" data-aos="fade-up">
+    <div class="section-header">
       <div class="section-accent-line"></div>
       <h2 class="section-title">
         <span class="keyword">let</span> <span class="string">experience</span> =
@@ -13,8 +13,6 @@
         *ngFor="let exp of experiences; let i = index"
         class="experience-card"
         [class.current]="exp.current"
-        [attr.data-aos]="'fade-up'"
-        [attr.data-aos-delay]="i * 100"
       >
         <div class="card-header-section">
           <div class="company-info">
