@@ -52,10 +52,10 @@
 
 .navbar-menu {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 2rem;
   margin: 0;
-  flex: 1;
   justify-content: flex-end;
 
   @media (max-width: 768px) {
@@ -84,18 +84,20 @@
 
 .navbar-nav {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
-  flex: 1;
   justify-content: flex-end;
+  flex-wrap: nowrap;
 
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 0;
     width: 100%;
+    flex-wrap: wrap;
   }
 }
 
