@@ -22,7 +22,7 @@
             <p class="job-title">{{ exp.title }}</p>
           </div>
           <div class="meta-info">
-            <span class="badge" [ngClass]="'badge-' + exp.type">
+            <span [class]="'badge badge-' + exp.type">
               {{ getTypeLabel(exp.type) }}
             </span>
             <span class="location" *ngIf="exp.location">📍 {{ exp.location }}</span>

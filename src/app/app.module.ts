@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { TypingAnimationModule } from 'angular-typing-animation';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
 import { ContactComponent } from './contact/contact.component';
+import { TypingAnimationDirective } from './directives/typing-animation.directive';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,14 @@ import { ContactComponent } from './contact/contact.component';
     ExperienceComponent,
     SkillsComponent,
     EducationComponent,
-    ContactComponent
+    ContactComponent,
+    TypingAnimationDirective
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
-    NgbModule,
-    TypingAnimationModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
